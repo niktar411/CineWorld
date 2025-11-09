@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Register for CineWorld - Your ultimate movie experience" />
+    <title>Register for CineWorld</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <link rel="stylesheet" href="body.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="basic-header">
+        <div class="logo">
+          <div class="logomark">
+            <img class="icon" src="img/icon.svg" alt="CineWorld Logo" />
+          </div>
+          <h1 class="text-wrapper">CineWorld</h1>
+        </div>
+        <img class="divider" src="img/divider.svg" alt="" />
+        <div class="switch-label">
+          <div class="switch" id="theme-switch">
+            <div class="ellipse"></div>
+          </div>
+          <span class="div">Dark theme</span>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="main-content">
+          <form class="simple-form" id="registration-form">
+            <h2 class="text-wrapper">Register for CineWorld</h2>
+            
+            <div class="form-row">
+              <div class="input">
+                <label for="first-name" class="title">First Name</label>
+                <div class="input-2">
+                  <div class="ellipse-2"></div>
+                  <input 
+                    id="first-name"
+                    class="placeholder input-field" 
+                    placeholder="Thomas" 
+                    type="text" 
+                    required 
+                  />
+                </div>
+              </div>
+              <div class="input">
+                <label for="last-name" class="title">Last Name</label>
+                <div class="input-2">
+                  <div class="ellipse-2"></div>
+                  <input 
+                    id="last-name"
+                    class="placeholder input-field" 
+                    placeholder="Edison" 
+                    type="text" 
+                    required 
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="div-2">
+                <label for="birth-date" class="title">Date of Birth</label>
+                <div class="input-2">
+                  <input 
+                    id="birth-date"
+                    class="placeholder input-field" 
+                    placeholder="DD.MM.YYYY" 
+                    type="text" 
+                  />
+                </div>
+              </div>
+              <div class="input">
+                <label for="email" class="title">Email</label>
+                <div class="input-2">
+                  <div class="ellipse-2"></div>
+                  <input 
+                    id="email"
+                    class="placeholder input-field" 
+                    placeholder="email@email.ru" 
+                    type="email" 
+                    required 
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="input">
+                <label for="password" class="title">Password</label>
+                <div class="input-2">
+                  <div class="ellipse-2"></div>
+                  <input 
+                    id="password"
+                    class="placeholder input-field" 
+                    placeholder="*******" 
+                    type="password" 
+                    required 
+                  />
+                </div>
+              </div>
+              <div class="input">
+                <label for="repeat-password" class="title">Repeat Password</label>
+                <div class="input-2">
+                  <div class="ellipse-2"></div>
+                  <input 
+                    id="repeat-password"
+                    class="placeholder input-field" 
+                    placeholder="*******" 
+                    type="password" 
+                    required 
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="div-2">
+                <label for="favorite-genre" class="title">Select your favourite genre</label>
+                <div class="select">
+                  <select id="favorite-genre" class="input-field">
+                    <option value="" disabled selected>Favorite genre</option>
+                    <option value="action">Action</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="drama">Drama</option>
+                    <option value="horror">Horror</option>
+                    <option value="sci-fi">Sci-Fi</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <label class="checkbox">
+                <input type="checkbox" class="checkbox-input" id="updates-subscription" />
+                <div class="rectangle-wrapper">
+                  <div class="rectangle"></div>
+                </div>
+                <span class="label">Subscribe to the latest updates of site materials</span>
+              </label>
+              
+              <label class="checkbox-2">
+                <input type="checkbox" class="checkbox-input" id="terms-acceptance" required />
+                <div class="rectangle-wrapper">
+                  <div class="rectangle"></div>
+                </div>
+                <span class="p">
+                  I accept the terms of the "Personal Data Processing Policy" and, for the purpose of
+                  establishing feedback with me, I consent to the processing of my personal data.
+                </span>
+              </label>
+            </div>
+
+            <button type="submit" class="button-filled">
+              <span class="register">REGISTER</span>
+            </button>
+          </form>
+        </div>
+      </main>
+
+      <div id="datepicker-overlay" class="datepicker-overlay" aria-hidden="true">
+        <div class="datepicker-modal">
+          <button class="datepicker-close" aria-label="Close datepicker">×</button>
+          <div class="datepicker-body">
+            <div class="datepicker-controls">
+              <select class="datepicker-month" aria-label="Select month"></select>
+              <select class="datepicker-year" aria-label="Select year"></select>
+            </div>
+            <div class="datepicker-calendar">
+              <div class="datepicker-weekdays">
+                <div>MO</div>
+                <div>TU</div>
+                <div>WE</div>
+                <div>TH</div>
+                <div>FR</div>
+                <div>SA</div>
+                <div>SU</div>
+              </div>
+              <div class="datepicker-days"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="theme.js"></script>
+    <script src="script.js"></script>
+    <script src="register.js"></script>
+  </body>
+</html>

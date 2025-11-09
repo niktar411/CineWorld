@@ -1,0 +1,108 @@
+@media (max-width: 768px) {
+  .page .basic-header {
+    padding: 16px 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .page .switch-label {
+    margin-left: 0;
+  }
+
+  .page .container {
+    padding: 30px 20px;
+  }
+
+  .page .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .page .input,
+  .page .div-2 {
+    width: 100%;
+    flex: none;
+  }
+
+  .page .simple-form {
+    gap: 25px;
+    padding: 20px 0px;
+  }
+
+  .page .text-wrapper {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .page .checkbox,
+  .page .checkbox-2 {
+    align-items: flex-start;
+  }
+
+  .page .label,
+  .page .p {
+    white-space: normal;
+    line-height: 1.4;
+  }
+  
+  .input-field {
+    padding-right: 30px;
+  }
+  
+  .page .button-filled {
+    width: 100%;
+    min-width: auto;
+    padding: 18px 24px;
+  }
+  
+  .page .button-filled {
+    animation: fadeInUp 0.6s ease 0.6s forwards;
+  }
+  
+  .error-message {
+      font-size: 11px;
+      min-height: 16px;
+  }
+  
+  .input, .div-2 {
+      margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page .switch-label {
+    order: 2;
+  }
+
+  .page .logo {
+    order: 1;
+  }
+
+  .datepicker-modal {
+    margin: 20px;
+    padding: 15px;
+  }
+  
+  .datepicker-day {
+    padding: 6px;
+    font-size: 14px;
+  }
+  
+  .datepicker-navigation {
+    padding-right: 30px;
+  }
+  
+  .datepicker-nav-button {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .datepicker-nav-button img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .datepicker-month-year {
+    font-size: 14px;
+  }
+}

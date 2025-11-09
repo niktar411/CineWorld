@@ -1,0 +1,417 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  padding: 0px;
+  position: relative;
+  background-color: var(--blue);
+}
+
+.dark-theme .page {
+  background-color: var(--blue);
+}
+
+.dark-theme .switch .ellipse {
+  left: 4px;
+  background-color: var(--violet-light);
+}
+
+.dark-theme .switch {
+  background-color: var(--white);
+}
+
+.page .basic-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page .logo {
+  display: inline-flex;
+  height: 32px;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.page .logomark {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.page .icon {
+  position: absolute;
+  width: 83.33%;
+  height: 83.33%;
+  top: 5.21%;
+  left: 5.21%;
+  transition: all 0.3s ease;
+}
+
+.page .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--title-font-family);
+  font-weight: var(--title-font-weight);
+  color: var(--violet);
+  font-size: var(--title-font-size);
+  letter-spacing: var(--title-letter-spacing);
+  line-height: var(--title-line-height);
+  white-space: nowrap;
+  font-style: var(--title-font-style);
+}
+
+.page .divider {
+  position: absolute;
+  width: calc(100% + 192px);
+  left: -96px;
+  bottom: 1px;
+  height: 1px;
+  object-fit: cover;
+}
+
+.page .switch-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  position: relative;
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+.page .switch {
+  position: relative;
+  width: 52px;
+  height: 26px;
+  background-color: var(--violet);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.page .ellipse {
+  position: relative;
+  top: calc(50.00% - 11px);
+  left: 28px;
+  width: 22px;
+  height: 22px;
+  background-color: var(--white);
+  border-radius: 11px;
+  transition: left 0.3s ease, background-color 0.3s ease;
+}
+
+.page .div {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--bold-18-font-family);
+  font-weight: var(--bold-18-font-weight);
+  color: var(--violet);
+  font-size: var(--bold-18-font-size);
+  letter-spacing: var(--bold-18-letter-spacing);
+  line-height: var(--bold-18-line-height);
+  white-space: nowrap;
+  font-style: var(--bold-18-font-style);
+}
+
+.page .container {
+  display: flex;
+  align-items: flex-start;
+  padding: 48px 20px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 1; /* Изменено с 0 0 auto на 1 для растягивания */
+  z-index: 0;
+  justify-content: center;
+}
+
+.page .main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.page .simple-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 24px 0px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 1; /* Добавлено для растягивания формы */
+}
+
+.page .form-row {
+  gap: 16px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+}
+
+.page .input {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  flex: 1;
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  min-width: 200px;
+  max-width: 100%;
+}
+
+.page .title {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: var(--bold-16-font-family);
+  font-weight: var(--bold-16-font-weight);
+  color: var(--black);
+  font-size: var(--bold-16-font-size);
+  letter-spacing: var(--bold-16-letter-spacing);
+  line-height: var(--bold-16-line-height);
+  font-style: var(--bold-16-font-style);
+}
+
+.page .input-2 {
+  height: 50px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 6px 20px;
+  align-self: stretch;
+  width: 100%;
+  background-color: var(--white);
+  border: 2px solid;
+  border-color: var(--violet-light);
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.page .ellipse-2 {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 7px;
+  height: 7px;
+  background-color: var(--red);
+  border-radius: 3.5px;
+}
+
+.page .placeholder {
+  position: relative;
+  flex: 1;
+  font-family: var(--regular-16-font-family);
+  font-weight: var(--regular-16-font-weight);
+  color: var(--violet-light);
+  font-size: var(--regular-16-font-size);
+  letter-spacing: var(--regular-16-letter-spacing);
+  line-height: var(--regular-16-line-height);
+  font-style: var(--regular-16-font-style);
+}
+
+.page .div-2 {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  flex: 1;
+  align-self: stretch;
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  min-width: 200px;
+}
+
+.page .title-2 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: var(--bold-16-font-family);
+  font-weight: var(--bold-16-font-weight);
+  color: var(--black);
+  font-size: var(--bold-16-font-size);
+  letter-spacing: var(--bold-16-letter-spacing);
+  line-height: var(--bold-16-line-height);
+  font-style: var(--bold-16-font-style);
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.page .placeholder-2 {
+  position: relative;
+  flex: 1;
+  font-family: var(--regular-16-font-family);
+  font-weight: var(--regular-16-font-weight);
+  color: var(--violet-light);
+  font-size: var(--regular-16-font-size);
+  letter-spacing: var(--regular-16-letter-spacing);
+  line-height: var(--regular-16-line-height);
+  font-style: var(--regular-16-font-style);
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.page .select {
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 20px;
+  width: 100%;
+  background-color: var(--white);
+  border: 2px solid;
+  border-color: var(--violet-light);
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  border-radius: 10px;
+}
+
+.page .default {
+  position: relative;
+  width: fit-content;
+  font-family: var(--regular-16-font-family);
+  font-weight: var(--regular-16-font-weight);
+  color: var(--violet-light);
+  font-size: var(--regular-16-font-size);
+  letter-spacing: var(--regular-16-letter-spacing);
+  line-height: var(--regular-16-line-height);
+  white-space: nowrap;
+  font-style: var(--regular-16-font-style);
+}
+
+.page .arrow-select {
+  position: relative;
+  width: 16.13px;
+  height: 16px;
+  margin-right: -0.07px;
+}
+
+.page .form-row-2 {
+  flex-direction: column;
+  gap: 10px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.page .checkbox {
+  display: flex;
+  height: 28px;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.page .rectangle-wrapper {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page .rectangle {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background-color: var(--white);
+  border-radius: 6px;
+  border: 2px solid;
+  border-color: var(--violet-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* Галочка для чекбокса */
+.page .rectangle::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 1px;
+  width: 6px;
+  height: 12px;
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.page .label {
+  width: fit-content;
+  white-space: nowrap;
+  position: relative;
+  margin-top: -1.00px;
+  font-family: var(--bold-16-font-family);
+  font-weight: var(--bold-16-font-weight);
+  color: var(--black);
+  font-size: var(--bold-16-font-size);
+  letter-spacing: var(--bold-16-letter-spacing);
+  line-height: var(--bold-16-line-height);
+  font-style: var(--bold-16-font-style);
+}
+
+.page .checkbox-2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+}
+
+.page .p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+  margin-top: -1.00px;
+  font-family: var(--bold-16-font-family);
+  font-weight: var(--bold-16-font-weight);
+  color: var(--black);
+  font-size: var(--bold-16-font-size);
+  letter-spacing: var(--bold-16-letter-spacing);
+  line-height: var(--bold-16-line-height);
+  font-style: var(--bold-16-font-style);
+}

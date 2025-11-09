@@ -1,0 +1,595 @@
+.page .button-filled {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 32px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: var(--violet);
+  border-radius: 10px;
+  opacity: 0;
+  visibility: visible;
+  margin-top: auto;
+  align-self: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  min-width: 200px;
+  animation: fadeInUp 0.6s ease 0.8s forwards;
+  transform: translateY(20px);
+}
+
+/* Анимация кнопки */
+.page .button-filled:hover {
+  opacity: 0.9 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(68, 10, 143, 0.3); /* Тень фиолетового цвета */
+}
+
+.page .button-filled:active {
+  opacity: 0.8 !important;
+  transform: translateY(0);
+}
+
+/* Эффект пульсации для кнопки */
+.page .button-filled::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.page .button-filled:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.page .register {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--button-text-font-family);
+  font-weight: var(--button-text-font-weight);
+  color: var(--white);
+  font-size: var(--button-text-font-size);
+  text-align: center;
+  letter-spacing: var(--button-text-letter-spacing);
+  line-height: var(--button-text-line-height);
+  white-space: nowrap;
+  font-style: var(--button-text-font-style);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.input-field {
+  all: unset;
+  position: relative;
+  flex: 1;
+  font-family: var(--regular-16-font-family);
+  font-weight: var(--regular-16-font-weight);
+  color: var(--black);
+  font-size: var(--regular-16-font-size);
+  letter-spacing: var(--regular-16-letter-spacing);
+  line-height: var(--regular-16-line-height);
+  font-style: var(--regular-16-font-style);
+  width: 100%;
+  background: transparent;
+  border: none;
+  transition: all 0.3s ease;
+  padding-right: 30px; /* Место для крестика */
+}
+
+/* Анимация для полей ввода */
+.input-field:focus {
+  outline: none;
+  color: var(--violet);
+}
+
+.input-field::placeholder {
+  color: var(--violet-light);
+  transition: color 0.3s ease;
+}
+
+.input-field:focus::placeholder {
+  color: transparent;
+}
+
+.select {
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 20px;
+  width: 100%;
+  background-color: var(--white);
+  border: 2px solid;
+  border-color: var(--violet-light);
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.select select {
+  all: unset;
+  width: 100%;
+  font-family: var(--regular-16-font-family);
+  font-weight: var(--regular-16-font-weight);
+  color: var(--black);
+  font-size: var(--regular-16-font-size);
+  letter-spacing: var(--regular-16-letter-spacing);
+  line-height: var(--regular-16-line-height);
+  font-style: var(--regular-16-font-style);
+  cursor: pointer;
+}
+
+.select select:focus {
+  outline: none;
+}
+
+.checkbox, .checkbox-2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.checkbox-input {
+  display: none;
+}
+
+/* Стили для отмеченного чекбокса с галочкой */
+.checkbox-input:checked + .rectangle-wrapper .rectangle {
+  background-color: var(--violet);
+  border-color: var(--violet);
+}
+
+.checkbox-input:checked + .rectangle-wrapper .rectangle::after {
+  display: block;
+  animation: checkmark 0.3s ease;
+}
+
+/* Анимация появления галочки */
+@keyframes checkmark {
+  0% {
+    transform: rotate(45deg) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(45deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Анимация появления элементов формы */
+.page .simple-form > * {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Задержки для всех элементов формы включая кнопку */
+.page .simple-form > *:nth-child(1) { animation-delay: 0.1s; }
+.page .simple-form > *:nth-child(2) { animation-delay: 0.2s; }
+.page .simple-form > *:nth-child(3) { animation-delay: 0.3s; }
+.page .simple-form > *:nth-child(4) { animation-delay: 0.4s; }
+.page .simple-form > *:nth-child(5) { animation-delay: 0.5s; }
+.page .simple-form > *:nth-child(6) { animation-delay: 0.6s; }
+.page .simple-form > *:nth-child(7) { animation-delay: 0.7s; }
+.page .simple-form > *:nth-child(8) { animation-delay: 0.8s; } /* Кнопка регистрации */
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Анимация переключения темы */
+.page * {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Стили для простого черного крестика */
+.clear-button {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 30px;
+  color: var(--black);
+  font-weight: normal;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.clear-button:hover {
+  color: var(--violet);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.input-2 {
+  position: relative;
+}
+
+/* Скрываем красный кружок когда есть текст в поле */
+.input-field:not(:placeholder-shown) ~ .ellipse-2 {
+  display: none;
+}
+
+/* Специфичные стили для полей с датой рождения */
+.page .div-2 .input-2 {
+  position: relative;
+}
+
+.datepicker-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+}
+
+.datepicker-overlay.active {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+.datepicker-modal {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 12px;
+  min-width: 440px;
+  min-height: 410px;
+  max-width: 90vw;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.datepicker-overlay.active .datepicker-modal {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.datepicker-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--violet-light);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+/* Новые стили для навигации с загрузкой стрелочек из файлов */
+.datepicker-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 18px;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  gap: 10px;
+  position: relative;
+  padding-right: 40px;
+}
+
+.datepicker-month-year {
+  font-family: var(--bold-16-font-family);
+  font-weight: var(--bold-16-font-weight);
+  color: var(--black);
+  font-size: var(--bold-16-font-size);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+.datepicker-nav-button {
+  background: transparent;
+  border: none;
+  height: 44px;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  padding: 0;
+}
+
+.datepicker-nav-button:hover {
+  transform: scale(1.1);
+}
+
+.datepicker-nav-button:active {
+  transform: scale(0.95);
+}
+
+.datepicker-controls {
+  display: none;
+}
+
+.datepicker-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: var(--bold-14-font-family);
+  color: var(--violet);
+  font-size: 16px;
+}
+
+.datepicker-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.datepicker-day {
+  padding: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--regular-16-font-family);
+  color: var(--violet);
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 16px;
+  border-radius: 10%;
+  width: 56px;
+  height: 54px;
+}
+
+.datepicker-day:hover {
+  background: var(--violet-light);
+  color: var(--white);
+}
+
+.datepicker-day.selected {
+  background: var(--violet);
+  color: var(--white);
+}
+
+.datepicker-day.other-month {
+  color: var(--violet-light);
+  opacity: 0.5;
+}
+
+.datepicker-day.disabled {
+  color: var(--violet-light);
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.datepicker-day.disabled:hover {
+  background: transparent;
+  color: var(--violet-light);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.datepicker-nav-button img {
+  transition: all 0.3s ease;
+  filter: brightness(1);
+}
+
+.dark-theme .datepicker-nav-button img {
+  filter: brightness(0);
+}
+
+/* Добавьте в конец style.css */
+
+.error-message {
+    font-family: var(--regular-14-font-family);
+    font-size: 12px;
+    color: var(--red);
+    margin-top: 5px;
+    display: none;
+    min-height: 18px;
+    animation: fadeIn 0.3s ease;
+}
+
+.input-2.error {
+    border-color: var(--red) !important;
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Улучшаем видимость красных кружков для обязательных полей */
+.ellipse-2 {
+    transition: opacity 0.3s ease;
+}
+
+/* Скрываем красный кружок когда поле заполнено и валидно */
+.input-field:valid ~ .ellipse-2,
+.input-field:not(:placeholder-shown) ~ .ellipse-2 {
+    opacity: 0.3;
+}
+
+/* Для темной темы */
+.dark-theme .error-message {
+    color: var(--red);
+}
+
+.dark-theme .input-2.error {
+    border-color: var(--red) !important;
+}
+
+/* Стили для сообщений об ошибках с абсолютным позиционированием */
+.error-message {
+    font-family: var(--regular-14-font-family);
+    font-size: 12px;
+    color: var(--red);
+    display: none;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    animation: fadeIn 0.3s ease;
+    top: 80px !important;
+}
+
+.checkbox-error {
+    font-family: var(--regular-14-font-family);
+    font-size: 12px;
+    color: var(--red);
+    display: none;
+    margin-top: 5px;
+    width: 100%;
+    animation: fadeIn 0.3s ease;
+}
+
+.input, .div-2 {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input.has-error, .div-2.has-error {
+    margin-bottom: 30px;
+}
+
+.checkbox, .checkbox-2 {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.checkbox.has-error, .checkbox-2.has-error {
+    margin-bottom: 25px;
+}
+
+.input-2.error {
+    border-color: var(--red) !important;
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Убираем красный кружок для необязательных полей */
+.div-2 .ellipse-2 {
+    display: none !important;
+}
+
+/* Для темной темы */
+.dark-theme .error-message {
+    color: var(--red);
+}
+
+.dark-theme .checkbox-error {
+    color: var(--red);
+}
+
+.dark-theme .input-2.error {
+    border-color: var(--red) !important;
+}
+
+.input-field.error {
+    color: var(--red) !important;
+}
+
+.input-2.has-error {
+    border-color: var(--red) !important;
+}
+
+
+.dark-theme .input-field.error {
+    color: var(--red) !important;
+}
+/* Стили для страницы успеха */
+.success-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  width: 100%;
+}
+
+.success-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 100%;
+}
+
+.success-title {
+  text-align: center;
+  margin: 0;
+  font-family: var(--title-font-family);
+  font-weight: var(--title-font-weight);
+  color: var(--violet);
+  font-size: var(--title-font-size);
+  letter-spacing: var(--title-letter-spacing);
+  line-height: var(--title-line-height);
+  font-style: var(--title-font-style);
+}
+
+.success-button {
+  margin-top: 0;
+  align-self: center;
+}

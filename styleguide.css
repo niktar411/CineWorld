@@ -1,0 +1,72 @@
+:root {
+  --black: rgba(36, 37, 39, 1);
+  --white: rgba(255, 255, 255, 1);
+  --red: rgba(231, 71, 45, 1);
+  --blue: rgba(236, 246, 254, 1);
+  --violet: rgba(68, 10, 143, 1);
+  --violet-light: rgba(143, 108, 188, 1);
+  --blackdark: rgba(189, 155, 233, 1);
+  --whitedark: rgba(0, 0, 0, 1);
+  --bluedark: rgba(8, 29, 47, 1);
+  --violetdark: rgba(170, 112, 245, 1);
+  --violet-lightdark: rgba(236, 246, 254, 1);
+  --title-font-family: "Space Mono", Helvetica;
+  --title-font-weight: 700;
+  --title-font-size: 28px;
+  --title-letter-spacing: 0px;
+  --title-line-height: 32px;
+  --title-font-style: normal;
+  --button-text-font-family: "Space Mono", Helvetica;
+  --button-text-font-weight: 700;
+  --button-text-font-size: 18px;
+  --button-text-letter-spacing: 0px;
+  --button-text-line-height: 20px;
+  --button-text-font-style: normal;
+  --bold-16-font-family: "Space Mono", Helvetica;
+  --bold-16-font-weight: 700;
+  --bold-16-font-size: 16px;
+  --bold-16-letter-spacing: 0px;
+  --bold-16-line-height: 160.0000023841858%;
+  --bold-16-font-style: normal;
+  --regular-16-font-family: "Space Mono", Helvetica;
+  --regular-16-font-weight: 400;
+  --regular-16-font-size: 16px;
+  --regular-16-letter-spacing: 0px;
+  --regular-16-line-height: 160.0000023841858%;
+  --regular-16-font-style: normal;
+  --bold-14-font-family: "Space Mono", Helvetica;
+  --bold-14-font-weight: 700;
+  --bold-14-font-size: 14px;
+  --bold-14-letter-spacing: 0px;
+  --bold-14-line-height: 160.0000023841858%;
+  --bold-14-font-style: normal;
+  --bold-18-font-family: "Space Mono", Helvetica;
+  --bold-18-font-weight: 700;
+  --bold-18-font-size: 18px;
+  --bold-18-letter-spacing: 0px;
+  --bold-18-line-height: 160.0000023841858%;
+  --bold-18-font-style: normal;
+  --regular-14-font-family: "Space Mono", Helvetica;
+  --regular-14-font-weight: 400;
+  --regular-14-font-size: 14px;
+  --regular-14-letter-spacing: 0px;
+  --regular-14-line-height: 139.9999976158142%;
+  --regular-14-font-style: normal;
+}
+
+.dark-theme {
+  --black: rgba(189, 155, 233, 1);
+  --white: rgba(0, 0, 0, 1);
+  --red: rgba(231, 71, 45, 1);
+  --blue: rgba(8, 29, 47, 1);
+  --violet: rgba(170, 112, 245, 1);
+  --violet-light: rgba(236, 246, 254, 1);
+}
+
+.dark-theme .clear-button {
+  color: var(--violet-light);
+}
+
+.dark-theme .clear-button:hover {
+  color: var(--violet);
+}
